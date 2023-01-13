@@ -1,0 +1,378 @@
+section {
+    background-attachment: fixed;
+}
+
+#redondo {
+    border-radius: 100% !important;
+    width: 100px;
+    overflow: hidden;
+}
+
+#carouselDarkVariant {
+    width: 100%!important;
+    height: 950px !important;
+}
+
+#logo {
+    transform: scale(2);
+    transition: 2s;
+}
+
+#logo img {
+    transition: 2s;
+    animation-duration: 2s;
+    animation-name: move;
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-20deg);
+        padding-bottom: 20px;
+    }
+    50% {
+        transform: rotate(-15deg);
+        padding-bottom: 0%;
+    }
+    75% {
+        transform: rotate(-20deg);
+        padding-bottom: 20px;
+    }
+    100% {
+        margin-bottom: 0%;
+    }
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    z-index: 50;
+    background-color: rgb(0, 0, 0, 0.1);
+    opacity: 0.9;
+    transition: 2s;
+    justify-self: center;
+}
+
+.navbar.active {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    color: black;
+    width: 70%;
+    z-index: 50;
+    background-color: #464646;
+    border-radius: 60px;
+    transition: 2s;
+}
+
+.path-active {
+    font-size: 20px;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7px;
+    width: 30%;
+}
+
+nav ul li {
+    display: flex;
+    font-size: 20px;
+    border-right: 2px solid rgb(43, 43, 43);
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    padding-right: 3px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    transition: 2s;
+}
+
+.path {
+    font-size: 20px;
+    color: white;
+}
+
+#rousel {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#pc {
+    background-image: url("../public/laptop.jpeg");
+    background-repeat: no-repeat;
+    background-position-x: calc(100%-20px);
+    background-position-y: center;
+    background-size: 100%;
+    min-width: 385px;
+}
+
+#sct {
+    height: 420px;
+    min-width: 900px;
+    display: flex;
+}
+
+#carousel img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.image {
+    opacity: 0;
+    transform: translateY(-150px);
+    transition: 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nikadid {
+    display: flex;
+    border-radius: 70%;
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: 1s;
+}
+
+.adidasnik {
+    border-radius: 70%;
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(500px);
+    transition: 1s;
+}
+
+.nikiAdidas {
+    border-radius: 70%;
+    width: 20%;
+    height: 176px;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0);
+    animation-duration: 6s;
+    animation-name: slideinN;
+}
+
+.Adidasniki {
+    border-radius: 70%;
+    width: 20%;
+    height: 176px;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0);
+    animation-duration: 6s;
+    animation-name: slideinA;
+}
+
+@keyframes slideinN {
+    0% {
+        margin-left: 0%;
+    }
+    40% {
+        margin-left: 30%;
+    }
+    50% {
+        margin-left: 15%;
+    }
+    60% {
+        margin-left: 50%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slideinA {
+    0% {
+        margin-right: 0%;
+    }
+    40% {
+        margin-right: 30%;
+    }
+    50% {
+        margin-right: 15%;
+    }
+    60% {
+        margin-right: 50%;
+    }
+    70% {
+        display: block;
+    }
+    100% {
+        margin-right: 0%;
+    }
+}
+
+#texto {
+    font-size: 50px;
+    display: block;
+    transition: 2s;
+    animation-name: slideinA;
+}
+
+@media (max-width: 912px) {
+    #direction {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: red;
+    }
+}
+
+#carousel {
+    position: relative;
+    background-color: black;
+    width: 18rem;
+    top: 27px;
+    left: 54px;
+    height: 11rem;
+    padding: 6px;
+}
+
+#contact {
+    font-size: 4rem;
+    color: white;
+}
+
+#contacto input {
+    color: black;
+}
+
+#contacto input::placeholder {
+    color: black;
+}
+
+.photo-article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 290px;
+    max-height: 250px;
+}
+
+.photo-article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.opacity {
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 30;
+}
+
+.cartHide {
+    display: none;
+}
+
+.cartShow {
+    position: fixed;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    bottom: 230px;
+    right: 10px;
+    width: 530px;
+    height: 500px;
+    background-color: #374251;
+    border-radius: 30px;
+    z-index: 30;
+    animation-duration: 1s;
+    animation-name: opacity;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#cart-image {
+    min-width: 120px;
+    max-height: 120px;
+}
+
+footer {
+    display: flex;
+    background-color: #d4d4d4;
+    padding: 8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-of {
+    opacity: 0;
+    transition: 2s;
+}
+
+.content-on {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: 1.5s;
+}
+
+#contenido-ofertas li {
+    height: 400px !important;
+    background: linear-gradient(#dfe5f6, #e8f2fa);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 10px;
+}
+
+#contenido-ofertas img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 1s;
+}
+
+#contenido-ofertas img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+strong span {
+    color: purple;
+}
+
+#compras {
+    height: 100vh;
+}
