@@ -1,9 +1,11 @@
 
-import React, { useState } from 'react'
+import React,{useState,Suspense, lazy} from 'react'
 import { Link } from 'react-router-dom';
 
 
+
 const Navbar = ({handleClick}) => {
+  
 
   const [hide, setHide] = useState(false)
 
@@ -88,7 +90,6 @@ const Navbar = ({handleClick}) => {
           </a>
 
         </div>
-
 
 
       </nav>

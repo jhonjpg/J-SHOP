@@ -45,8 +45,15 @@ const Tienda = () => {
   
   
   
+    const [animada, setanimada] = useState(false);
 
-    const [hide, setHide] = useState(false)
+    const [hide, setHide] = useState(false);
+
+
+
+ 
+
+    const transicion = `class-1 ${animada ? "class-2" : ""}`
 
   
 
@@ -55,8 +62,14 @@ const Tienda = () => {
 
      
       setHide(!hide);
+      setanimada(!animada);
 
-      console.log(`ahora mismo es   ${hide}`)
+
+
+
+      setanimada(transicion)
+
+console.log()
 
      }
 
@@ -69,7 +82,7 @@ const Tienda = () => {
 
 <div ref={tiendaContent} className={contenido}>
 
-<Articles hide={hide}/> 
+<Articles hide={hide} transicion={transicion}/> 
 
 </div>
 

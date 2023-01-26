@@ -91,8 +91,99 @@ export const shoppingInitial = {
             edicion: "flug",
             price: 200
 
-        }
+        },
 
+
+
+        {
+            id: 11,
+            image: "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 12,
+            image: "https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&w=1600 ",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 13,
+            image: "https://images.pexels.com/photos/1698359/pexels-photo-1698359.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 14,
+            image: "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1600 ",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 15,
+            image: "https://images.pexels.com/photos/2225727/pexels-photo-2225727.jpeg?auto=compress&cs=tinysrgb&w=1600 ",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 16,
+            image: "https://images.pexels.com/photos/1407354/pexels-photo-1407354.jpeg?auto=compress&cs=tinysrgb&w=1600 ",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 17,
+            image: "https://images.pexels.com/photos/1619652/pexels-photo-1619652.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 18,
+            image: "https://images.pexels.com/photos/3281608/pexels-photo-3281608.jpeg?auto=compress&cs=tinysrgb&w=1600 ",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 19,
+            image: "https://images.pexels.com/photos/225160/pexels-photo-225160.jpeg?auto=compress&cs=tinysrgb&w=1600 ",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        },
+
+        {
+            id: 20,
+            image: "https://images.pexels.com/photos/9993287/pexels-photo-9993287.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            marca: "nike",
+            edicion: "flug",
+            price: 200
+
+        }
 
 
     ],
@@ -122,7 +213,6 @@ export function shoppingReducer(state, action) {
 
 
 
-                console.log(newitem)
 
 
 

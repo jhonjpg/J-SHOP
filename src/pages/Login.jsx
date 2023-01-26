@@ -1,10 +1,65 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from '../components/LoginComponents/Carousel'
+import axios, { Axios } from 'axios'
+import { Navigate } from 'react-router'
+
+
 
 
 
 const Login = () => {
+
+
+
+
+  const [body, setBody] = useState({ name: "", password: "" })
+
+  const inputChange = ({ target }) => {
+
+    const { name, value } = target;
+
+    setBody({
+      ...body,
+      [name]: value
+    })
+
+  }
+
+
+
+
+
+  const postLogin =  (e) => {
+
+    e.preventDefault();
+
+      console.log("tomamos el try");
+
+
+       axios.post("http://localhost:4100/api/login", body)
+      .then(({data}) => {
+
+         
+
+console.log(" llegando al then");
+
+console.log(data);
+
+
+window.location.href = '/home'
+        
+      }).catch(({response}) => {
+
+        console.log(response.data.errors.password.msg)
+      }) 
+
+
+
+  }
+
+
+
 
 
   return (
@@ -30,7 +85,8 @@ const Login = () => {
 
 
             <div className="sm:w-1/2  lg:min-w-700 ">
-              <form className="">
+
+              <form onSubmit={postLogin} className="">
 
                 <div className="flex flex-row items-center justify-center lg:justify-start">
                   <p className="text-lg mb-0 mr-4">Sign in with</p>
@@ -86,58 +142,66 @@ const Login = () => {
                 <div className="mb-6">
                   <input
                     type="text"
-                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    value={body.name} 
+                    onChange={inputChange} 
+                    className="form-control text-center block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     id="exampleFormControlInput2"
-                    placeholder="Email address"
+                    placeholder="Usuario" name="name"
                   />
                 </div>
 
 
                 <div className="mb-6">
-                  <input type="text" className="form-control
-           block
-           w-full
-           px-3
-           py-1.5
-           text-base
-           font-normal
-           text-gray-700
-           bg-white bg-clip-padding
-           border border-solid border-gray-300
-           rounded
-          transition
-           ease-in-out
-           m-0
-           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput123"
-
-
-                    aria-describedby="emailHelp123" placeholder="Password" />
+                  <input type="password" value={body.password} onChange={inputChange} 
+                    className="form-control text-center block w-full px-4 py-2 text-xl font-normal 
+                  text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out
+                   m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"  id="exampleInput123"
+                    aria-describedby="emailHelp123" autoComplete="true"  placeholder="Password"  name="password" />
                 </div>
 
 
 
                 <div className="flex justify-between items-center mb-6">
                   <div className="form-group form-check">
+                  </div>
+                  <a href="#!" className="text-gray-800">Forgot password?</a>
+                </div>
 
 
-            </div>
-            <a href="#!" className="text-gray-800">Forgot password?</a>
-          </div>
 
-          <div className="text-center lg:text-left  ">
-            <button
-              type="button"
-              className=" sm:text-black inline-block  px-7 py-3 font-medium text-sm leading-snug  uppercase rounded   shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-            >
-              Login
-            </button>
-            <p className="text-sm font-semibold mt-2 pt-1 mb-0">
-              Don't have an account?
-              <Link
-                to="/register"
-                className="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out">Register</Link>
-            </p>
-          </div>
+
+
+                <div className="flex justify-between items-center mb-6">
+
+
+                </div>
+
+
+
+
+                <div className="text-center lg:text-left  ">
+
+
+
+                  <button
+                    type="submit"
+                    className=" sm:text-black inline-block  px-7 py-3 font-medium text-sm leading-snug  uppercase rounded   shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Login
+                  </button>
+
+
+
+
+
+
+                  <p className="text-sm font-semibold mt-2 pt-1 mb-0">
+                    Don't have an account?
+                    <Link
+                      to="/register"
+                      className="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out">Register</Link>
+                  </p>
+                </div>
 
 
 
@@ -150,7 +214,7 @@ const Login = () => {
             </div>
 
 
-            
+
           </div>
         </div>
 

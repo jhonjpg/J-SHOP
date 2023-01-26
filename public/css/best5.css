@@ -1,11 +1,20 @@
+.Best5Reload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: 5s;
+}
+
 .best5-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgb(185, 185, 185);
-    transition: ease-in;
+    background-color: #b9b9b9;
+    transition: 5s;
 }
 
 .best5-section ul {
@@ -196,4 +205,57 @@
     margin-top: 100px;
     transition: 1s;
     opacity: 0;
+}
+
+
+/* /modo compra */
+
+.buy {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100% !important;
+    transition: 2s;
+    position: fixed;
+    z-index: 49;
+    bottom: 120px;
+    height: calc(100vh - 120px) !important;
+    background-color: coral;
+    animation-duration: 2s;
+    animation-name: page;
+}
+
+@keyframes page {
+    0% {
+        left: 0;
+        width: 18%;
+    }
+    50% {
+        left: 100px;
+    }
+    75% {}
+    100% {
+        margin-bottom: 0%;
+        width: 100% !important;
+    }
+}
+
+.white-buy {
+    display: flex;
+    position: fixed;
+    justify-content: start;
+    align-items: flex-start;
+    transform: rotate(0deg);
+    left: 0;
+    height: 60%;
+    width: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 4s;
+}
+
+.one-buy {
+    border-radius: 30px;
+    background-color: rgb(224, 224, 224);
+    width: 100%;
 }

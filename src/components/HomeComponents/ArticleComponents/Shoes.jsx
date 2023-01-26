@@ -7,8 +7,16 @@ import CartItem from '../../Shopping-cars/CartItem'
 
 const Shoes = ({hide}) => {
 
-  console.log(hide)
 
+
+
+
+  const [animada, setanimada] = useState(false);
+
+
+
+
+  const transicion = `class-1 ${animada  ? "class-2" : ""}`
 
   const cartClass = `cartHide ${hide ? "cartShow" : ""}`
 
@@ -17,12 +25,33 @@ const Shoes = ({hide}) => {
 
   const { products, cart } = state;
 
+
   const addToCart = (id) => {
 
 
-    dispatch({ type: TYPES.ADD_TO_CART, payload: id })
+    dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+
+
+setanimada(!animada)
+
 
   }
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
 
 
   const DELFromCart = () => {
@@ -41,7 +70,7 @@ const Shoes = ({hide}) => {
     <>
       <div className=" flex flex-wrap	 w-70 justify-center	 gap-6	bg-gray-200 p-2 shadow-2xl" data-mdb-zoom-effect="true">
 
-        {products.map((product) => <Items key={product.id} data={product} addToCart={addToCart}
+        {products.map((product) => <Items key={product.id} data={product} addToCart={addToCart}  transicion= {transicion} 
         />)
         }
 

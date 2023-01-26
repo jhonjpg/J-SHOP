@@ -3,7 +3,7 @@ import { useObserver } from '../HomeComponents/ArticleComponents/useObserver'
 
 
 
-const Items = ({ data, addToCart }) => {
+const Items = ({ data, addToCart, transicion,  }) => {
 
 
 
@@ -49,22 +49,18 @@ const Items = ({ data, addToCart }) => {
 
 
 
-
-
-
-
   return (
 
     <div className=" flex flex-col justify-between w-70	bg-gray-200 p-2 shadow-2xl overflow-hidden" data-mdb-zoom-effect="true">
 
 
-      <div className="photo-article  ">
+      <div  className={transicion}>
 
         <a className=" flex rounded-3xl w-60 h-72 overflow-hidden" data-mdb-ripple="true">
 
           <img
             ref={imageRef}
-            src={imagenUrL}
+            src= {imagenUrL}
             data-src={imagenUrL}
             className={imageClass}
             alt="imagen"

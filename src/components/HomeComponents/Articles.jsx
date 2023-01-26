@@ -7,6 +7,7 @@ const Articles = ({hide}) => {
 
   
 
+
   const logos = useRef()
 
   const [marcas, setmarcas] = useState("");
@@ -56,7 +57,7 @@ const Articles = ({hide}) => {
 
     <>
 
-    <strong className="fs-1 mt-40">Tienda</strong>
+    <strong className="fs-1 mt-40"><span id="bigspan">T</span>ienda</strong>
 
     
   
@@ -88,6 +89,8 @@ const Articles = ({hide}) => {
 
 
 </div> 
+
+
 
 </>
     )

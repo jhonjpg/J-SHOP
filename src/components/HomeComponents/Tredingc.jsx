@@ -13,6 +13,9 @@ const Tredingc = () => {
 
       <div className="  flex justify-around  w-full  py-5 ">
 
+
+
+{/* primero */}
       <div className="w-2/5	">
 
       <div className=" flex  justify-around	h-60 w-full	bg-gray-300  p-3">
@@ -28,25 +31,27 @@ const Tredingc = () => {
 
       <div className=" h-100  carousel-inner ">
 
-      <div className=" h-100 carousel-item active ">
+        <div className=" h-100 carousel-item active ">
+  
+        <img src="https://images.pexels.com/photos/13691720/pexels-photo-13691720.jpeg?auto=compress&cs=tinysrgb&w=800 "
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp" alt="Winter Landscape"
+        className="h-100  object-cover w-full" />    </div>
 
-      <img src="https://www.shutterstock.com/image-photo/bangkok-thailand-march-26-2018-260nw-1074073061.jpg"
+
+      <div className=" h-100 carousel-item  ">
+
+      <img src="https://images.pexels.com/photos/1102776/pexels-photo-1102776.jpeg?auto=compress&cs=tinysrgb&w=800"
       data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp" alt="Winter Landscape"
       className="h-100  object-cover w-full" />    </div>
 
 
       <div className="h-100 carousel-item">
 
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpavVm5lxW_fJexmgqyIZbVDOZhPgIhuUWupnRSqBv9nPWZ1QiydEavMmfQjXxAnMeMM&usqp=CAU"
+      <img src="https://images.pexels.com/photos/2225727/pexels-photo-2225727.jpeg?auto=compress&cs=tinysrgb&w=1600"
       data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp" alt="Winter Landscape"
       className="h-100 w-full object-cover " />    </div>
 
 
-      <div className=" h-100 carousel-item active ">
-
-      <img src="https://media.self.com/photos/62741f1913915af32c973528/1:1/w_1000,h_1000,c_limit/Nike%20Free%20TR8.jpg"
-      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp" alt="Winter Landscape"
-      className="h-100  object-cover w-full" />    </div>
 
 
       <button className="carousel-control-prev" type ="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -63,6 +68,9 @@ const Tredingc = () => {
       </div>
       </div>
 
+
+
+
       <div className=" flex flex-col w-2/5 justify-around	">
 
       <div className="text-3xl">jordan vit</div>
@@ -75,6 +83,9 @@ const Tredingc = () => {
       <p className="text-blue-400">$45.22</p>
 
       </div>
+
+
+
       </div>
       </div>
 
@@ -82,55 +93,59 @@ const Tredingc = () => {
 
 
 
+
+{/* segundo */}
 
       <div className="w-2/5	">
 
       <div className=" flex  justify-around	h-60 w-full	bg-gray-300  p-3">
 
-      <div className="  flex 	w-1/2   card rounded-lg   ">
+      <div className="  flex 	w-1/2 overflow-hidden  card rounded-lg    ">
 
-      <div className="carousel-inner relative h-100 w-100 overflow-hidden">
-
-
-      <div className=" carousel-item active" data-bs-interval="1000">
-
+     
+      <div id="carouselExampleControls" className="carousel slide relative h-full w-full" data-bs-ride="carousel">
+  <div className="carousel-inner relative w-full h-full overflow-hidden">
+    <div className="carousel-item active relative float-left w-full h-full">
       <img
-      src="https://thumbs.dreamstime.com/b/london-uk-january-adidas-originals-shoes-white-background-german-multinational-corporation-designs-manufactures-sports-107072481.jpg"
-      className=" block object-contain	 w-100 h-100"
-      alt="..."
+        src="https://images.pexels.com/photos/13691727/pexels-photo-13691727.jpeg?auto=compress&cs=tinysrgb&w=800"
+        className="flex  object-cover w-full h-full"
+        alt="Wild Landscape"
       />
-      </div>
-
-
-      <div className ="carousel-item" data-bs-interval="2000">
-
+    </div>
+    <div className="carousel-item relative float-left w-full h-full">
       <img
-      src="https://c8.alamy.com/comp/2C6B8KF/pair-of-black-adidas-ultraboost-20-running-shoes-cut-out-isolated-on-white-background-2C6B8KF.jpg"
-      className="h-100 object-cover block w-full"
-      alt="..."
+        src="https://images.pexels.com/photos/225160/pexels-photo-225160.jpeg?auto=compress&cs=tinysrgb&w=1600 "
+        className="flex object-cover w-full h-full"
+        alt="Camera"
+      /> 
+    </div>
+    <div className="carousel-item relative float-left w-full h-full">
+      <img
+        src="https://images.pexels.com/photos/6685972/pexels-photo-6685972.jpeg?auto=compress&cs=tinysrgb&w=800"
+        className="flex object-cover w-full h-full"
+        alt="Exotic Fruits"
       />
-      </div>
-
-    
-
-      <div className ="carousel-item" >     
-      <img src="https://cdn.sanity.io/images/c1chvb1i/production/b5c61e5225a4299293a7a3db67a568616a78a54a-1400x933.png?rect=0,72,1400,788&w=1400&h=788" 
-      className ="d-block w-100" alt="..." />
-      </div>
-
-
-
-
-      <button className="carousel-control-prev" type ="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-      </button>
-
-      <button className="carousel-control-next" type ="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-      </button>
-      </div>
+    </div>
+  </div>
+  <button
+    className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button
+    className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+    </div>
       </div>
 
 
@@ -147,6 +162,7 @@ const Tredingc = () => {
 
  </div>
       </div>
+      
       </div>
 
 

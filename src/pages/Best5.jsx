@@ -1,47 +1,42 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../components/HomeComponents/Navbar'
-import { useObserver } from '../components/HomeComponents/ArticleComponents/useObserver'
 
 
 const Best4 = ({handleClick}) => {
 
 
+  const [comprar, setcomprar] = useState(false)
 
-  const best5Content = useRef()
-
-  const [marcas, setmarcas] = useState("");
-
-
-  const [Visible, setVisible] = useState(false)
+  const [white, setwhite] = useState(false)
 
 
-  const contenido = `content-of ${Visible ? "content-on" : ""}`
+  
+
+  const comprarClass = `one ${comprar ? "buy" : ""}`
+  const whiteClass = `white ${white ? "white-buy" : ""}`
 
 
-  const entry = useObserver(best5Content, { rootMargin: "100px" })
-  const animation = useObserver(best5Content, { rootMargin: "0" })
+  const buying = () => {
 
 
-  useEffect(() => {
-    if (!entry) return;
 
-    if (entry.isIntersecting) {
+setcomprar(!comprar)
 
-      setmarcas(entry.target.dataset.src)
-
-    }
-
-  }, [entry, { rootMargin: "0" }])
+setwhite(!white)
 
 
-  useEffect(() => {
-    if (animation?.isIntersecting) {
-
-      setVisible(true)
-    }
+if(setcomprar){
 
 
-  }, [animation]);
+}
+
+
+
+    console.log("funciona")
+
+
+  }
+
 
 
   return (
@@ -50,16 +45,16 @@ const Best4 = ({handleClick}) => {
 
 <Navbar handleClick={handleClick}/>
 
-<div ref={best5Content}className={contenido}>
+<div className="content-on">
 
 <div className="best5-section ">
 
 <ul className="">
 
     {/* 1 */}
-    <li className="one">
+    <li onClick={buying} className={comprarClass}>
 
-    <div className="white">
+    <div className={whiteClass}>
 
 <img src="./img/white.png" alt="" />
         

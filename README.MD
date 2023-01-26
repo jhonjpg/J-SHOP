@@ -1,0 +1,6 @@
+# J-SHOP APP
+
+
+
+
+##DEVELOPMENT PASOS
